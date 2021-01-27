@@ -1,0 +1,449 @@
+@media (max-width: 1230px){
+	.c-hamburder{
+		display: block;
+		position: absolute;
+		right: 0;
+      top: 0;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      background: #000000;
+      border: none;
+      z-index: 9999;
+      box-shadow: none;
+      margin-top: 10px;
+      font-size: 0;
+	}
+	.c-hamburder:focus{
+	   background: #721919;
+	   border-radius: 3px;
+	   outline: none;
+	}
+	.c-hamburder span {
+		display: block;
+		position: absolute;
+		top: 20px;
+		left: 5px;
+		right: 5px;
+		height: 5px;
+		border-radius: 20px;
+		background: #fff;	
+	}
+	.c-hamburder span::before,.c-hamburder span::after {
+		position: absolute;
+		display: block;
+		left: 0;
+		width: 100%;
+		height: 5px;
+		border-radius: 20px;
+		background: #fff;
+		content: "";
+	}
+	.c-hamburder span::before {
+		top: -15px;
+	}
+	.c-hamburder-line span::after {
+		bottom: -15px;
+	}
+	.c-hamburder-line span {
+        -webkit-transition: background;
+        -moz-transition: background;
+        -ms-transition: background;
+        -o-transition: background;
+        transition: background 0s 0.3s;
+        
+	}
+	.c-hamburder-line span::before,.c-hamburder-line span::after{
+		transition-duration: 0.3s,0.3s;
+		transition-delay: 0.3s,0s;
+	}
+	.c-hamburder-line span::before{
+		transition-property: top,transform;
+	}
+	.c-hamburder-line span::after{
+		transition-property: bottom,transform;
+	}
+	.c-hamburder-line.is-active {
+	}
+	.c-hamburder-line.is-active span {
+		background: none;
+	}
+	.c-hamburder-line.is-active span::before{
+		top: 0;
+		transform: rotate(-45deg);
+	}
+	.c-hamburder-line.is-active span::after{
+		bottom: 0;
+		transform: rotate(45deg);
+	}
+	.c-hamburder-line.is-active span::before,.c-hamburder-line.is-active span::after{
+		transition-delay: 0s,0,3s;
+	}
+	.header__center-text{
+	   display: flex;
+	   flex-direction: column;
+      font-size: 20px;
+      line-height: 35px;
+      align-items: flex-start;
+      margin-top: 100px;
+      margin-left: 100px;
+      font-family: Montserrat;
+	   transition: all ease 1s;
+	   width: 30px;
+	   height: 20px;
+	}
+	
+	.header__menu{
+	   display:flex;
+	   flex-direction:column;
+      margin-left: 0;
+      margin-top: 100px;
+	}
+	#menu {
+      display: flex;
+      text-align: left;
+		width: 300px;
+		margin-left: -240px;
+		background: rgba(182, 86, 103, 0);
+		position: fixed;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		transition: all ease 1s;
+		overflow: auto;	
+		z-index: 7;
+	}
+	#menu.nav-active{
+      display: flex;
+		margin-left: 0;
+		background: #721919;
+	}
+	.header{
+		height: 60px;
+	}
+	.header__left-text{
+      margin-left: 30px;
+	}
+	.header__left-logo,.header__right-text{
+		display: none;
+	}
+	.header__right{
+      margin-right: 3%;
+	}
+	.menu-line{
+		display: flex;
+		flex-wrap: wrap;	
+	}
+	.presentation__image{
+		margin-left: 2%;
+	}
+	.presentation__text-1{
+	  margin-top: 40px;
+	  margin-right: 5px;
+    }
+    .forum__text{
+    	margin-left: 3%;
+    	line-height: 30px;
+    }
+	
+	.footer{
+		text-align: center;
+		box-sizing: border-box;
+		display:flex;
+      flex-direction:column;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+	}
+	.footer__column-1 {
+	    margin-left: 0;
+	}
+	.footer__column-3{
+       margin-left: -20px;
+	}
+	.footer__logo{
+		margin-right: 0px;
+	}
+	.bakery-block{
+		margin-top: 40px;
+	}
+	.forum__image img{
+	    max-width: 1200px;
+	}
+	.forum__text{
+		font-size: 18px;
+	}
+}
+@media(max-width: 810px){
+	.header__right{
+      margin-right: 1%;
+	}
+	.bakery__confectionery{
+		font-size: 42px;
+		line-height: 50px;
+	}
+	.donut__image img,.discount-1 img,.discount-2 img{
+		width: 650px;
+    }
+    .presentation__text{
+    	font-size: 20px;
+    }
+    .forum__image img{
+		width: 810px;
+	}
+	.forum__text{
+		margin-top: 5px;
+		line-height: 20px;
+		font-weight: 400;
+	}
+
+	.entry__field-1,.entry__field-2,.entry__field-3{
+		width: 450px;
+		height: 40px;
+	}
+	.forum{
+    overflow-y: scroll;
+}
+.forum::-webkit-scrollbar-button {
+   background-image:url('');
+   width:5px;
+   height:0px;
+}
+
+::-webkit-scrollbar-track{
+   background-color:none;	
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  background-color:rgba(114, 25, 25, 0.1);
+  box-shadow: inset 1px 1px 10px #f3faf7;	
+  max-width: 30%;			
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: #610B0B;
+  border-radius: 20px;
+}
+
+::-webkit-resizer{
+  background-image:url('');
+  background-repeat:no-repeat;
+  width:4px;
+  height:0px
+}
+
+::-webkit-scrollbar{
+width: 4px;
+}
+@media(max-width: 725px){
+	.donut__image img,.discount-1 img,.discount-2 img{
+		width: 600px;
+    }
+
+    .presentation{
+    	display:flex;
+        flex-wrap: wrap;
+    }
+    .presentation img{
+    	margin-bottom: 40px;
+    }
+    .forum__text{
+    	line-height: 20px;
+    	font-size: 17px;
+    }
+    .forum__image img{
+		width: 725px;
+	}
+	.presentation__image{
+		margin-left: 3%;
+	}
+	.presentation__text{
+		margin-left: 3%;
+	}
+}
+@media(max-width: 650px){
+	.header__right{
+      margin-right: 0;
+	}
+	.donut__image img,.discount-1 img,.discount-2 img{
+		width: 520px;
+    }
+    .forum__image img{
+		width: 650px;
+	}
+	.forum__text{
+    	font-size: 16px;
+    }
+}
+@media(max-width: 575px){
+	.donut__image img,.discount-1 img,.discount-2 img{
+		width: 470px;
+    }
+    .discount-1__text,.discount-2__text{
+    	font-size: 20px;
+        margin-left: 26px;
+        margin-top: 18px;
+    }
+}
+@media(max-width: 500px){
+	.donut__image img,.discount-1 img,.discount-2 img{
+		width: 430px;
+    }
+    .entry__field-1,.entry__field-2,.entry__field-3{
+		width: 350px;
+		height: 40px;
+	}
+}
+@media(max-width: 440px){
+	.donut__image img,.discount-1 img,.discount-2 img{
+		width: 380px;
+    }
+    .presentation__text-1{
+    	font-size: 16px;
+    	margin: 5px;
+    }
+    .about-us{
+    	font-size: 38px;
+    	margin-top: 60px;
+    }
+    .bakery__button{
+    	width: 180px;
+    	height: 40px;
+    }
+    .bakery__button {
+    	padding: 6px;
+    }
+    .bakery__confectionery{
+    	font-size: 36px;
+    }
+    .bakery__art{
+    	font-size: 20px;
+    }
+    .products__text{
+    	font-size: 16px;
+    }
+    .prices__text{
+    	font-size: 16px;
+    }
+    .fast__delivery-text{
+    	font-size: 16px;
+    }
+    .products,.prices,.Fast__delivery{
+    	padding: 20px;
+    }
+    .catalog__block{
+    	margin-top: 40px;
+    }
+    .image-1-menu,.image-2-menu,.image-3-menu,.image-4-menu,
+    .image-5-menu,
+    .image-6-menu,.image-7-menu,.image-8-menu,
+    .image-9-menu,.image-10-menu,.image-11-menu,.image-12-menu{
+    	width: 260px;
+    	height: 400px;
+    }
+    .image-1-menu img{
+    	width: 200px;
+    }
+    .image-2-menu img,
+    .image-11-menu img{
+    	width: 170px;
+    }
+    .image-6-menu img{
+    	width: 165px;
+    }
+    .image-4-menu img{
+    	width: 180px;
+    }
+    .image-3-menu img{
+    	width: 200px;
+    }
+    .image-5-menu img{
+    	width: 150px;
+    }
+    .image-7-menu img{
+    	width: 220px;
+    }
+    .image-10-menu img{
+    	width: 125px;
+    }
+    .image-12-menu img{
+    	width: 120px;
+    }
+    .image-8-menu img{
+    	width: 150px;
+    }
+    .image-9-menu img{
+    	width: 140px;
+    }
+    .image-body {
+    	font-size: 16px;
+    }
+    .image-body {
+    	font-size: 20px;
+
+    }
+    .image-body {
+    	font-size: 12px;
+    }
+    .image-1__text-3,.image-2__text-3,.image-3__text-3,
+    .image-4__text-3,.image-5__text-3,.image-6__text-3,
+    .image-7__text-3,.image-8__text-3,.image-9__text-3,
+    .image-10__text-3,.image-11__text-3,.image-12__text-3 {
+    	width: 180px;
+		height: 40px;
+		font-size: 13px;
+	}
+	.image-1__text-4 h2,.image-2__text-4 h2,.image-3__text-4 h2,
+    .image-4__text-4 h2,.image-5__text-4 h2,.image-6__text-4 h2,
+    .image-7__text-4 h2,.image-8__text-4 h2,.image-9__text-4 h2,
+    .image-10__text-4 h2,.image-11__text-4 h2,.image-12__text-4 h2 {
+		font-size: 20px;
+    }
+    .view{
+    	width: 180px;
+    	height: 40px;
+    }
+    .send{
+    	width: 180px;
+    	height: 40px;
+    }
+    .presentation__image img{
+    	width: 250px;
+    }
+    .forum__image img{
+		width: 440px;
+	}
+}
+@media(max-width: 380px){
+	.donut__image img,.discount-1 img,.discount-2 img{
+		width: 340px;
+    }
+    .discount-1__text,.discount-2__text{
+    	font-size: 16px;
+    }
+    .forum__image img{
+		width: 380px;
+	}
+}
+@media(max-width: 340px){
+	.donut__image img,.discount-1 img,.discount-2 img{
+		width: 280px;
+    }
+    .forum__image img{
+		width: 340px;
+	}
+}
+@media(max-width: 290px){
+	.donut__image img,.discount-1 img,.discount-2 img{
+		width: 230px;
+		height: 200px;	
+    }
+    .forum__image img{
+		width: 270px;
+	}
